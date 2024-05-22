@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../media/favicon.png" type="image/x-icon">
+    <title>Black Rider | Carrito de Compras</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <ul class="navbar">
+                <div class="menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../pageshtml/store.html">Tienda</a></li>
+                    <li><a href="../pageshtml/reviews.html">Review´s</a></li>
+                </div>
+                <div class="logo">
+                    <li><a href="../index.html"><img src="../media/Logo BlackRider.png" alt="Logo"></a></li>
+                </div>
+                <div class="cart">
+                    <li id="cart_icon"><a href="./pageshtml/cart.html"><img src="../media/Cart.png" alt="Cart"></a></li>
+                    <li id="mail_icon"><a href=""><img src="../media/mail.png" alt="contact"></a></li>
+                    <li><a href=""><img src="../media/Instagram.png" alt="Instagram"></a></li>
+                    <li><a href=""><img src="../media/tiktok.png" alt="tiktok"></a></li>
+                    <li><a href=""><img src="../media/youtube.png" alt="youtube"></a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cart-main">
+    <Section class="cart">
+        <h1 class="carth1">Tu Carrito</h1>
+        <div id="listaCarrito"></div>
+    <select id="tipoEnvio">
+        <option value="local">Retiro Local (Sin Costo)</option>
+        <option value="domicilio">Envío a Domicilio ($1500)</option>
+    </select>
+        <label for="cuotas">Número de Cuotas:</label>
+        <input type="number" id="cuotas" min="1" value="1">
+        <h2>SubTotal a Pagar (s/imp): <span id="totalAPagar">$0</span></h2>
+        <h3>Valor por Cuota: <span id="valorCuota">$0</span> por mes</h3>
+
+    <button id="irAPagar">Ir a pagar</button>
+    </Section>   
+    <script src="../carrito.js"></script>
+    <script>
+        document.getElementById('irAPagar').addEventListener('click', function() {
+            window.location.href = 'checkout.html';
+        });
+    </script>
+</body>
+</html>
